@@ -106,7 +106,7 @@
     <script>
         function calculateEcoScore() {
             const input = document.getElementById("materialInput").value;
-            fetch("/calculate", {
+            fetch("https://flask-igni.onrender.com/calculate", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ materials: { [input]: "100" } })
